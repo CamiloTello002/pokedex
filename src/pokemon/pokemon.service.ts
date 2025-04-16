@@ -32,7 +32,6 @@ export class PokemonService {
     return `This action returns all pokemon`;
   }
 
-  // here we can find by three possible fields: name, id, and no. All of them are validated
   async findOne(term: string) {
     let pokemon: Pokemon | null = null;
 
