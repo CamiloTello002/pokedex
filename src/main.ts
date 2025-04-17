@@ -10,7 +10,12 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-      forbidNonWhitelisted: true
+      forbidNonWhitelisted: true,
+      // good for automatic type conversion, but consumes more memory
+      transform: true,
+      transformOptions: {
+        enableImplicitConversion: true
+      }
     })
   )
 
